@@ -53,21 +53,27 @@ function password_generator() {
     let nr_of_symbols = document.getElementById('nr_symbols').value;
     let pass_length = parseInt(nr_of_letters) + parseInt(nr_of_digits) + parseInt(nr_of_symbols);
     let gen_pass = [];
-    for (let i = 1; i <= nr_of_letters; i++) {
-        gen_pass.push(letters[Math.floor(Math.random()*letters.length)]);
-    }
-    for (let i = 1; i <= nr_of_digits; i++) {
-        gen_pass.push(digits[Math.floor(Math.random()*digits.length)]);
-    }
-    for (let i = 1; i <= nr_of_symbols; i++) {
-        gen_pass.push(symbols[Math.floor(Math.random()*symbols.length)]);
-    }
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+    if (pass_length < 8) {
+        document.getElementById('generated_pass').innerText = 'Hey, dude. If you wish not to be hacked in ~3 minutes, you will need to have a longer password!';
+    } else if (pass_length > 18) {
+        document.getElementById('generated_pass').innerText = 'Well, this one might be tooooooooo long for some websites!';
+    } else {
+        for (let i = 1; i <= nr_of_letters; i++) {
+            gen_pass.push(letters[Math.floor(Math.random()*letters.length)]);
         }
-        return array.join('');
+        for (let i = 1; i <= nr_of_digits; i++) {
+            gen_pass.push(digits[Math.floor(Math.random()*digits.length)]);
+        }
+        for (let i = 1; i <= nr_of_symbols; i++) {
+            gen_pass.push(symbols[Math.floor(Math.random()*symbols.length)]);
+        }
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+              let j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array.join('');
+        }
+        document.getElementById('generated_pass').innerText = shuffle(gen_pass);
     }
-    document.getElementById('generated_pass').innerText = shuffle(gen_pass);
 }

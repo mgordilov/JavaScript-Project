@@ -155,10 +155,6 @@ a:visited {
   background: transparent;
   padding: 0;
   border: none;
-}
-
-/* button styling */
-.button {
   --border-right: 6px;
   --text-stroke-color: rgb(0, 0, 0);
   --animation-color: rgb(0, 0, 0);

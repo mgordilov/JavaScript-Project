@@ -77,3 +77,6 @@ function password_generator() {
         document.getElementById('generated_pass').innerText = shuffle(gen_pass);
     }
 }
+
+function caesarCipher() {
+}

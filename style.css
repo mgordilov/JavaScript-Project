@@ -207,6 +207,27 @@ a:visited {
   padding: 0 10%;
 }
 
+.deencoder_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+.deencoder_inputs {
+  padding: 15px 20px;
+  outline: none;
+  background: inherit;
+  border-radius: 5px;
+  color: inherit;
+  border: 1px solid;
+  border-color: black;
+  font-size: 1em;
+  width: 25em;
+  height: 12em;
+}
+
 /*********** Night Mode toggler ***********/
 .switch {
     font-size: 17px;

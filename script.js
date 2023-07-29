@@ -22,6 +22,9 @@ function nightMode() {
             span.style.borderColor = 'rgb(0, 250, 0)';
             span.style.backgroundColor = 'black';
         })
+        document.querySelectorAll('.deencoder_inputs').forEach((textarea) => {
+            textarea.style.borderColor = 'rgb(0, 250, 0)';
+        })
     } else {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
@@ -32,6 +35,9 @@ function nightMode() {
         document.querySelectorAll('.input_span').forEach((span) => {
             span.style.borderColor = 'black';
             span.style.backgroundColor = 'white';
+        })
+        document.querySelectorAll('.deencoder_inputs').forEach((textarea) => {
+            textarea.style.borderColor = 'black';
         })
     }
     header.style.backgroundColor = body.style.backgroundColor;

@@ -272,6 +272,38 @@ a:visited {
   margin-top: 2%;
 }
 
+/************* FOOTER SECTION *************/
+
+footer {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  padding: 0 5em;
+  font-size: 1.5em;
+}
+.follow {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-facebook:hover {
+  color: rgb(0, 94, 188);
+}
+.fa-instagram:hover {
+  color: rgb(255, 133, 133);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+li {
+  margin: auto 1rem;
+  cursor: pointer;
+}
+
 /*********** Night Mode toggler ***********/
 /* The switch - the box around the slider */
 .switch {

@@ -84,5 +84,49 @@ function password_generator() {
     }
 }
 
-function caesarCipher() {
+
+function caesarCipher(text, shift, decrypt = false) {
+    shift = decrypt ? (26 - shift) % 26 : shift;
+    
+    function shiftCharacter(char) {
+        const charCode = char.charCodeAt(0);
+        let shiftedCharCode;
+        
+        if (charCode >= 65 && charCode <= 90) { // Uppercase letters
+            shiftedCharCode = ((charCode - 65 + shift) % 26) + 65;
+        } else if (charCode >= 97 && charCode <= 122) { // Lowercase letters
+            shiftedCharCode = ((charCode - 97 + shift) % 26) + 97;
+        } else {
+            return char; // Non-alphabetic characters remain unchanged
+        }
+        
+        return String.fromCharCode(shiftedCharCode);
+    }
+    
+    const encryptedText = text.split('').map(shiftCharacter).join('');
+    
+    return encryptedText;
 }
+  
+function encriptText() {
+    const encodeInput = document.getElementById('encript');
+    const decodeInput = document.getElementById('decript');
+    
+    const plaintext = encodeInput.value;
+    const encryptedText = caesarCipher(plaintext, 4, false);
+    
+    decodeInput.value = encryptedText;
+}
+
+function decriptText() {
+    const encodeInput = document.getElementById('encript');
+    const decodeInput = document.getElementById('decript');
+    
+    const plaintext = decodeInput.value;
+    const encryptedText = caesarCipher(plaintext, 4, true);
+    
+    encodeInput.value = encryptedText;
+}
+
+document.getElementById("encript").addEventListener("input", encriptText);
+document.getElementById("decript").addEventListener("input", decriptText);

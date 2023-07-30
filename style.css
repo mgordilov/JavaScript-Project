@@ -224,9 +224,52 @@ a:visited {
   border: 1px solid;
   border-color: black;
   font-size: 1em;
-  width: 25em;
+  width: 35vw;
   height: 12em;
   resize: none;
+}
+
+/*************** JOIN US SECTION ***************/
+#join_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+.name_email {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.forminputBox {
+  position: relative;
+  margin-top: 3%;
+}
+
+.form_inputs {
+  padding: 15px 20px;
+  outline: none;
+  background: inherit;
+  border-radius: 5px;
+  color: inherit;
+  border: 1px solid;
+  border-color: black;
+  font-size: 1em;
+  width: 35vw;
+  height: 2vh;
+  resize: none;
+}
+
+.form_message {
+  height: 15%;
+}
+
+.form_button {
+  justify-content: left;
+  margin-top: 2%;
 }
 
 /*********** Night Mode toggler ***********/

@@ -20,7 +20,6 @@ header {
     justify-content: space-between;
     background-color: transparent;
     top: 0;
-    /* transition: 0.2s ease-in-out; */
 }
 header.scrolled {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -418,17 +417,6 @@ li {
 }
 
 @media (max-width: 953px) {
-  .data {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .text_inputs {
-    width: 68vw;
-  }
-}
-
-@media (max-width: 767px) {
   .logo_brand {
     height: 4em;
   }
@@ -437,20 +425,34 @@ li {
     height: 3.5em;
   }
 
+  #pass-generator,
+  #deencoder,
+  #join_us {
+    padding-top: 4em;
+    height: fit-content;
+  }
+
+  .data {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text_inputs {
+    width: 68vw;
+  }
+
+  footer {
+    padding: 0 3em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  
   .dropdown_menu {
     width: 92vw;
     top: 6em;
     left: 1em;
-  }
-
-  #pass-generator,
-  #deencoder {
-    padding-top: 2em;
-  }
-
-  #join_us {
-    padding-top: 4em;
-    height: fit-content;
   }
 
   .joinUs_form {

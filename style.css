@@ -433,6 +433,10 @@ li {
     height: 4em;
   }
 
+  .logo_brand img {
+    height: 3.5em;
+  }
+
   .dropdown_menu {
     width: 92vw;
     top: 6em;

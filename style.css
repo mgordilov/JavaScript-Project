@@ -15,7 +15,7 @@ body {
 header {
     position: sticky;
     display: flex;
-    padding: 0.5em 6em;
+    padding: 0.5em 10%;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
@@ -25,13 +25,12 @@ header {
 header.scrolled {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: inherit;
-    transition: 0.1s ease-in-out;
     z-index: 1;
 }
 
-header nav {
+.dropdown_menu{
   display: flex;
-  align-items: center;
+  box-shadow: none;
 }
 
 a {
@@ -49,12 +48,48 @@ a:visited {
     align-items: center;
 }
 
-.nav_but {
-    margin-right: 2.5em;
-}
-
 .section_titles {
   font-weight: 500;
+}
+
+.toggle_btn {
+  font-size: 1.4rem;
+  display: none;
+}
+
+
+.dropdown_menu li {
+  list-style: none;
+}
+
+/*************** RESPONSIVE NAVBAR ***************/
+
+@media (max-width: 1172px) {
+
+  .dropdown_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: left;
+    gap: 15px;
+    position: absolute;
+    top: 7em;
+    right: 10%;
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dropdown_menu.open {
+    display: flex;
+    padding: 10px 0;
+    height: 12em;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .toggle_btn {
+    display: block;
+  }
 }
 
 /*************** INTRO SECTION + CONTENTS ***************/
@@ -235,7 +270,7 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 0 10%;
+  padding: 3% 10% 0 10%;
 }
 
 .name_email {
@@ -294,7 +329,7 @@ footer {
   color: rgb(255, 133, 133);
 }
 
-ul {
+footer .follow ul {
   list-style: none;
   display: flex;
   padding: 0;

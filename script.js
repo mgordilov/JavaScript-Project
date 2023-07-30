@@ -7,16 +7,36 @@ document.addEventListener('scroll', () => {
     }
 })
 
+function openMenu() {
+    let menuBtn = document.querySelector('.toggle_btn');
+    let menuBtnIcon = document.querySelector('.toggle_btn i');
+    let dropDownMenu = document.querySelector('.dropdown_menu');
+    let pageLinks = document.querySelectorAll('.nav_but');
+    function openDropDown() {
+        dropDownMenu.classList.toggle('open');
+        const menuIsOpen = dropDownMenu.classList.contains('open');
+        menuBtnIcon.classList = menuIsOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    }
+    menuBtn.onclick = openDropDown;
+    pageLinks.forEach((nav_but) => {
+        nav_but.onclick = openDropDown;
+    })
+}
+
+addEventListener('load', openMenu);
+
 function nightMode() {
     let body = document.querySelector('body');
     let header = document.querySelector('header');
     let generate_but = document.querySelector('.button');
     let formButton = document.querySelector('.f_button');
+    let navMenu = document.querySelector('.dropdown_menu');
     if (document.getElementById('night_mode').checked) {
         body.style.backgroundColor = 'black';
         body.style.color = 'rgb(0, 200, 0)';
         generate_but.classList.add('night');
         formButton.classList.add('night');
+        navMenu.style.backgroundColor = 'black';
         document.querySelectorAll('.text_inputs').forEach((item) => {
             item.style.borderColor = 'rgb(0, 250, 0)';
         })
@@ -35,6 +55,7 @@ function nightMode() {
         body.style.color = 'black';
         generate_but.classList.remove('night');
         formButton.classList.remove('night');
+        navMenu.style.backgroundColor = 'white';
         document.querySelectorAll('.text_inputs').forEach((item) => {
             item.style.borderColor = 'black';
         })

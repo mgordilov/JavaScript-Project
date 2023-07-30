@@ -21,16 +21,22 @@
             </div>
         </a>
         <nav>
-            <a href="#home" class="nav_but">Home</a>
-            <a href="#pass-generator" class="nav_but">Password generator</a>
-            <a href="#deencoder" class="nav_but">De(En)coder</a>
-            <a href="#join_us" class="nav_but">Join Us</a>
-            <label class="switch">
-                <input id="night_mode" type="checkbox" onclick="nightMode()">
-                <span class="slider"></span>
-              
-            </label>
+            <div class="dropdown_menu">
+                <li><a href="#home" class="nav_but">Home</a></li>
+                <li><a href="#pass-generator" class="nav_but">Password generator</a></li>
+                <li><a href="#deencoder" class="nav_but">De(En)coder</a></li>
+                <li><a href="#join_us" class="nav_but">Join Us</a></li>
+                <li>
+                    <label class="switch">
+                        <input id="night_mode" type="checkbox" onclick="nightMode()">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </div>
         </nav>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
     <section id="intro">
         <span class="welcome"></span>
@@ -85,17 +91,17 @@
     <section id="join_us">
         <h1 class="section_titles">Join us!</h1>
         <h2>This site is a small step into a big world of encrypted identity and protection of your personal data. That's why in case you have any suggestions on how to improve our tool or what featuers you find useful to add, please send us your message by completing the form below. Who knows, maybe you will become one of us!</h2>
-        <form action="mailto:m.gordilov@aol.com" method="post" class="joinUs_form">
+        <form action="https://getform.io/f/00f590c2-7912-4e6b-a135-ee225e50d6ef" method="POST" class="joinUs_form">
             <div class="forminputBox">
-                <input id='full_name' class="form_inputs" required="" type="text" placeholder="Write here...">
+                <input id='full_name' class="form_inputs" name="Full Name" required="" type="text" placeholder="Write here...">
                 <span class="input_span">Full Name:</span>
             </div>
             <div class="forminputBox">
-                <input id='email' class="form_inputs" required="" type="email" placeholder="Write here..." spellcheck="false">
+                <input id='email' class="form_inputs" name="Email" required="" type="email" placeholder="Write here..." spellcheck="false">
                 <span class="input_span">Your email:</span>
             </div>
             <div class="forminputBox">
-                <textarea id='message' class="form_inputs form_message" required="" type="text" placeholder="Write here..."></textarea>
+                <textarea id='message' class="form_inputs form_message" name="Message" required="" type="text" placeholder="Write here..."></textarea>
                 <span class="input_span">Message:</span>
             </div>
             <div class="submit_button form_button">

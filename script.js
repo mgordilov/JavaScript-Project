@@ -11,10 +11,12 @@ function nightMode() {
     let body = document.querySelector('body');
     let header = document.querySelector('header');
     let generate_but = document.querySelector('.button');
+    let formButton = document.querySelector('.f_button');
     if (document.getElementById('night_mode').checked) {
         body.style.backgroundColor = 'black';
         body.style.color = 'rgb(0, 200, 0)';
         generate_but.classList.add('night');
+        formButton.classList.add('night');
         document.querySelectorAll('.text_inputs').forEach((item) => {
             item.style.borderColor = 'rgb(0, 250, 0)';
         })
@@ -25,10 +27,14 @@ function nightMode() {
         document.querySelectorAll('.deencoder_inputs').forEach((textarea) => {
             textarea.style.borderColor = 'rgb(0, 250, 0)';
         })
+        document.querySelectorAll('.form_inputs').forEach((formInput) => {
+            formInput.style.borderColor = 'rgb(0, 250, 0)';
+        })
     } else {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
         generate_but.classList.remove('night');
+        formButton.classList.remove('night');
         document.querySelectorAll('.text_inputs').forEach((item) => {
             item.style.borderColor = 'black';
         })
@@ -38,6 +44,9 @@ function nightMode() {
         })
         document.querySelectorAll('.deencoder_inputs').forEach((textarea) => {
             textarea.style.borderColor = 'black';
+        })
+        document.querySelectorAll('.form_inputs').forEach((formInput) => {
+            formInput.style.borderColor = 'black';
         })
     }
     header.style.backgroundColor = body.style.backgroundColor;

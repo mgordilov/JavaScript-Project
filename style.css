@@ -378,7 +378,7 @@ li {
 
 /*************** RESPONSIVE DESIGN ***************/
 
-@media (max-width: 1172px) {
+@media (max-width: 1023px) {
 
   .dropdown_menu {
     display: none;
@@ -416,7 +416,7 @@ li {
   }
 }
 
-@media (max-width: 953px) {
+@media (max-width: 844px) {
   .logo_brand {
     height: 4em;
   }
@@ -425,8 +425,18 @@ li {
     height: 3.5em;
   }
 
+  .dropdown_menu {
+    width: 94vw;
+    top: 6em;
+    left: 1.5em;
+  }
+
   #pass-generator,
-  #deencoder,
+  #deencoder {
+    padding-top: 2em;
+    height: 100vmax;
+  }
+
   #join_us {
     padding-top: 4em;
     height: fit-content;
@@ -441,20 +451,6 @@ li {
     width: 68vw;
   }
 
-  footer {
-    padding: 0 3em;
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 767px) {
-  
-  .dropdown_menu {
-    width: 92vw;
-    top: 6em;
-    left: 1em;
-  }
-
   .joinUs_form {
     gap: 20px;
   }
@@ -466,5 +462,14 @@ li {
   footer {
     padding: 0 1em;
     font-size: 0.8em;
+  }  
+
+}
+
+@media (max-width: 550px) {
+  .dropdown_menu {
+    width: 90vw;
+    top: 6em;
+    left: 1.3em;
   }
 }
